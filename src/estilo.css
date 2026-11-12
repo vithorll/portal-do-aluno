@@ -1,0 +1,16 @@
+:root{
+  --bg:#0F2C5A; --panel:#1A3F7F; --code:#081D3D; --cyan:#6BD6FA; --teal:#52E8CC;
+  --yellow:#FFD166; --ink:#E8F0FF; --muted:#9DB4D8; --line:#31589C;
+}
+*{box-sizing:border-box;}
+body{margin:0; background:var(--bg); color:var(--ink);
+  font-family:Calibri,"Segoe UI",system-ui,sans-serif; line-height:1.5;}
+.pagina{max-width:720px; margin:0 auto; padding:28px;}
+.topo h1{font-family:Cambria,Georgia,serif; font-size:30px; margin:0;}
+.topo p{color:var(--muted); margin:4px 0 20px;}
+.card{background:var(--panel); border-radius:10px; padding:12px 16px; margin:10px 0;
+  display:flex; align-items:center; gap:12px; flex-wrap:wrap;}
+.card strong{font-size:16px;}
+.badge{font-weight:bold; padding:3px 10px; border-radius:6px; font-size:12px;}
+.badge.ok{background:var(--teal); color:var(--bg);}
+.badge.pend{background:var(--yellow); color:var(--bg);}

@@ -1,0 +1,20 @@
+COMO RODAR O PROJETO (precisa de DOIS terminais)
+
+Na primeira vez:
+  npm install
+
+Terminal 1 — a API (fica rodando):
+  npm run api
+  -> sobe em http://localhost:3001/redacoes
+
+Terminal 2 — o site:
+  npm run dev
+  -> abre em http://localhost:5173
+
+Deixe os DOIS rodando ao mesmo tempo enquanto programa.
+Para parar cada um: Ctrl+C na janela correspondente.
+
+O que a API faz:
+  GET  http://localhost:3001/redacoes   -> lista as redações
+  POST http://localhost:3001/redacoes   -> adiciona uma redação
+As redações ficam salvas no arquivo db.json.

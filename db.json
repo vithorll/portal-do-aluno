@@ -1,0 +1,11 @@
+{
+  "redacoes": [
+    { "id": 1, "tema": "Meio ambiente",      "status": "corrigida",   "nota": 920 },
+    { "id": 2, "tema": "Tecnologia",         "status": "em_correcao" },
+    { "id": 3, "tema": "Educação",           "status": "corrigida",   "nota": 680 },
+    { "id": 4, "tema": "Cidadania",          "status": "corrigida",   "nota": 800 },
+    { "id": 5, "tema": "Saúde pública",      "status": "em_correcao" },
+    { "id": 6, "tema": "Trabalho e emprego", "status": "corrigida",   "nota": 740 },
+    { "id": 7, "tema": "Cultura digital",    "status": "em_correcao" }
+  ]
+}

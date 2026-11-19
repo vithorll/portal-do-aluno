@@ -1,141 +1,44 @@
-:root {
-  --bg: #0F2C5A;
-  --panel: #1A3F7F;
-  --code: #081D3D;
-  --cyan: #6BD6FA;
-  --teal: #52E8CC;
-  --yellow: #FFD166;
-  --ink: #E8F0FF;
-  --muted: #9DB4D8;
-  --line: #31589C;
-  --alt: #16386F;
+:root{
+  --bg:#0F2C5A; --panel:#1A3F7F; --code:#081D3D; --cyan:#6BD6FA; --teal:#52E8CC;
+  --yellow:#FFD166; --rose:#F4869A; --ink:#E8F0FF; --muted:#9DB4D8; --line:#31589C; --alt:#16386F;
 }
+*{box-sizing:border-box;}
+body{margin:0; background:var(--bg); color:var(--ink);
+  font-family:Calibri,"Segoe UI",system-ui,sans-serif; line-height:1.5;}
+.pagina{max-width:720px; margin:0 auto; padding:28px;}
+.topo h1{font-family:Cambria,Georgia,serif; font-size:30px; margin:0;}
+.topo p{color:var(--muted); margin:4px 0 20px;}
 
-* {
-  box-sizing: border-box;
-}
+/* card de redação */
+.card{background:var(--panel); border-radius:10px; padding:12px 16px; margin:10px 0;
+  display:flex; align-items:center; gap:12px; flex-wrap:wrap;}
+.card strong{font-size:16px;}
+.badge{font-weight:bold; padding:3px 10px; border-radius:6px; font-size:12px;}
+.badge.ok{background:var(--teal); color:var(--bg);}
+.badge.pend{background:var(--yellow); color:var(--bg);}
 
-body {
-  margin: 0;
-  background: var(--bg);
-  color: var(--ink);
-  font-family: Calibri, "Segoe UI", system-ui, sans-serif;
-  line-height: 1.5;
-}
+/* input de texto (busca e formulário) */
+.busca{width:100%; padding:10px 14px; margin:4px 0 14px; border-radius:8px;
+  border:1px solid var(--line); background:var(--code); color:var(--ink);
+  font-size:15px; font-family:inherit;}
+.busca::placeholder{color:var(--muted);}
+.busca:focus{outline:none; border-color:var(--cyan);}
 
-.pagina {
-  max-width: 720px;
-  margin: 0 auto;
-  padding: 28px;
-}
+/* formulário de nova redação */
+.form-nova{display:flex; gap:8px; margin:4px 0 14px;}
+.form-nova .busca{margin:0;}
+.btn{background:var(--teal); color:var(--bg); border:none; border-radius:8px;
+  padding:0 20px; font-weight:bold; cursor:pointer; font-size:14px; font-family:inherit;}
+.btn:hover{filter:brightness(1.06);}
 
-.topo h1 {
-  font-family: Cambria, Georgia, serif;
-  font-size: 30px;
-  margin: 0;
-}
+/* filtros por status */
+.filtros{display:flex; gap:8px; flex-wrap:wrap; margin-bottom:6px;}
+.chip{background:var(--alt); color:var(--ink); border:1px solid var(--line);
+  border-radius:999px; padding:6px 15px; cursor:pointer; font-size:14px; font-family:inherit;}
+.chip:hover{border-color:var(--cyan);}
+.chip.ativo{background:var(--cyan); color:var(--bg); border-color:var(--cyan); font-weight:bold;}
 
-.topo p {
-  color: var(--muted);
-  margin: 4px 0 20px;
-}
-
-/* card de redação (da aula passada) */
-.card {
-  background: var(--panel);
-  border-radius: 10px;
-  padding: 12px 16px;
-  margin: 10px 0;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  flex-wrap: wrap;
-}
-
-.card strong {
-  font-size: 16px;
-}
-
-.badge {
-  font-weight: bold;
-  padding: 3px 10px;
-  border-radius: 6px;
-  font-size: 12px;
-}
-
-.badge.ok {
-  background: var(--teal);
-  color: var(--bg);
-}
-
-.badge.pend {
-  background: var(--yellow);
-  color: var(--bg);
-}
-
-/* busca (input controlado) */
-.busca {
-  width: 100%;
-  padding: 10px 14px;
-  margin: 4px 0 14px;
-  border-radius: 8px;
-  border: 1px solid var(--line);
-  background: var(--code);
-  color: var(--ink);
-  font-size: 15px;
-  font-family: inherit;
-}
-
-.busca::placeholder {
-  color: var(--muted);
-}
-
-.busca:focus {
-  outline: none;
-  border-color: var(--cyan);
-}
-
-/* filtros por status (botões/chips) */
-.filtros {
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-  margin-bottom: 6px;
-}
-
-.chip {
-  background: var(--alt);
-  color: var(--ink);
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  padding: 6px 15px;
-  cursor: pointer;
-  font-size: 14px;
-  font-family: inherit;
-}
-
-.chip:hover {
-  border-color: var(--cyan);
-}
-
-.chip.ativo {
-  background: var(--cyan);
-  color: var(--bg);
-  border-color: var(--cyan);
-  font-weight: bold;
-}
-
-/* estado vazio */
-.vazio {
-  color: var(--muted);
-  text-align: center;
-  padding: 26px;
-  font-style: italic;
-}
-
-/* contagem */
-.contagem {
-  color: var(--muted);
-  font-size: 13px;
-  margin: 6px 0 2px;
-}
+/* mensagens de carregando / erro / vazio */
+.carregando{color:var(--cyan); padding:18px 0;}
+.erro{color:var(--rose); padding:18px 0; font-weight:bold;}
+.vazio{color:var(--muted); text-align:center; padding:26px; font-style:italic;}
